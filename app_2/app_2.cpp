@@ -16,10 +16,12 @@ void load_plugin() {
 }
 
 void before_say_sth() {
+  ___NOTE_BELOW___
   g_f_plugin_before_say_sth();
 }
 
 void after_say_sth() {
+  ___NOTE_BELOW___
   g_f_plugin_after_say_sth();
 }
 
