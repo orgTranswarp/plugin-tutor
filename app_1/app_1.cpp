@@ -3,12 +3,12 @@
 
 std::string g_sth("something");
 
-___NOTE_BELOW___
+__NOTE_BELOW__
 void before_say_sth() {
   std::cout << "I think," << std::endl;
 }
 
-___NOTE_BELOW___
+__NOTE_BELOW__
 void after_say_sth() {
   std::cout << "is wrong." << std::endl;
 }
@@ -18,12 +18,12 @@ void say_sth() {
 }
 
 int main() {
-  ___NOTE_BELOW___
+  __NOTE_BELOW__
   before_say_sth();
 
   say_sth();
 
-  ___NOTE_BELOW___
+  __NOTE_BELOW__
   after_say_sth();
   return 0;
 }
