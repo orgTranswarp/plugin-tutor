@@ -8,5 +8,6 @@ void say_sth() {
 
 int main() {
   say_sth();
+
   return 0;
 }

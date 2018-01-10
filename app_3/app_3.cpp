@@ -48,5 +48,6 @@ int main() {
   say_sth();
 
   after_say_sth();
+
   return 0;
 }

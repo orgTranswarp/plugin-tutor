@@ -25,5 +25,6 @@ int main() {
 
   __NOTE__
   after_say_sth();
+
   return 0;
 }
