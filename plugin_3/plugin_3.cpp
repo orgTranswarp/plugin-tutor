@@ -3,7 +3,7 @@
 #include "../include/common.h"
 
 extern "C" void before_say_sth() {
-  __NOTE_BELOW__
+  __NOTE__
   const std::string &sth = get_sth();
   if (sth == "something") {
     set_sth("nothing");

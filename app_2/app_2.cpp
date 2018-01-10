@@ -4,11 +4,11 @@
 
 std::string g_sth("something");
 
-__NOTE_BELOW__
+__NOTE__
 typedef void (*f_type)();
 f_type g_f_plugin_before_say_sth, g_f_plugin_after_say_sth;
 
-__NOTE_BELOW__
+__NOTE__
 void load_plugin() {
   void *handle = dlopen("./libplugin_2." SO_SUFFIX, RTLD_LAZY);
   g_f_plugin_before_say_sth = (f_type) dlsym(handle, "before_say_sth");
@@ -16,12 +16,12 @@ void load_plugin() {
 }
 
 void before_say_sth() {
-  __NOTE_BELOW__
+  __NOTE__
   g_f_plugin_before_say_sth();
 }
 
 void after_say_sth() {
-  __NOTE_BELOW__
+  __NOTE__
   g_f_plugin_after_say_sth();
 }
 
@@ -30,7 +30,7 @@ void say_sth() {
 }
 
 int main() {
-  __NOTE_BELOW__
+  __NOTE__
   load_plugin();
 
   before_say_sth();

@@ -1,5 +1,7 @@
 project(plugin_tutor)
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 add_executable(app_0 app_0/app_0.cpp include/common.h)
 
 add_executable(app_1 app_1/app_1.cpp include/common.h)

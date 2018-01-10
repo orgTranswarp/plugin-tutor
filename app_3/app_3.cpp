@@ -8,12 +8,12 @@ std::string g_sth("something");
 typedef void (*f_type)();
 f_type g_f_plugin_before_say_sth, g_f_plugin_after_say_sth;
 
-__NOTE_BELOW__
+__NOTE__
 const std::string& _get_sth() {
   return g_sth;
 }
 
-__NOTE_BELOW__
+__NOTE__
 void _set_sth(const std::string& sth) {
   g_sth = sth;
 }
@@ -23,7 +23,7 @@ void load_plugin() {
   g_f_plugin_before_say_sth = (f_type) dlsym(handle, "before_say_sth");
   g_f_plugin_after_say_sth = (f_type) dlsym(handle, "after_say_sth");
 
-  __NOTE_BELOW__
+  __NOTE__
   __init_f_type init_f = (__init_f_type) dlsym(handle, "__init");
   init_f(_get_sth, _set_sth);
 }

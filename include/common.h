@@ -7,7 +7,7 @@
 #define SO_SUFFIX "so"
 #endif
 
-#define __NOTE_BELOW__
+#define __NOTE__
 
 #define __INTERNAL__
 #define __API__
