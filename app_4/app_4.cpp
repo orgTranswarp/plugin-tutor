@@ -20,7 +20,7 @@ public:
   }
 } g_sth_service_impl;
 
-callback_f_type g_callbacks[LAST_EVENT];
+callback_f_type g_callbacks[EVENT_SIZE];
 
 int trigger_event(event e, void *payload) {
   return g_callbacks[e](payload);
@@ -35,11 +35,11 @@ void load_plugin() {
 int main() {
   load_plugin();
 
-  trigger_event(BEFORE_SAY_STH_EVENT, NULL);
+  trigger_event(EVENT_BEFORE_SAY_STH, NULL);
 
   say_sth();
 
-  trigger_event(AFTER_SAY_STH_EVENT, NULL);
+  trigger_event(EVENT_AFTER_SAY_STH, NULL);
 
   return 0;
 }

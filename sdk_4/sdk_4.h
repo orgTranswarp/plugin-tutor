@@ -11,9 +11,9 @@ public:
 };
 
 __PROTOCOL__ enum event{
-  BEFORE_SAY_STH_EVENT = 0,
-  AFTER_SAY_STH_EVENT,
-  LAST_EVENT,
+  EVENT_BEFORE_SAY_STH = 0,
+  EVENT_AFTER_SAY_STH,
+  EVENT_SIZE,
 };
 
 typedef int (*callback_f_type)(void *);
