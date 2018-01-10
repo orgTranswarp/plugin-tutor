@@ -3,11 +3,10 @@
 #include "../include/common.h"
 
 extern "C" void before_say_sth() {
-  __NOTE__
-  const std::string &sth = get_sth();
-  if (sth == "something") {
-    set_sth("nothing");
-  }
+XX const std::string &sth = get_sth();
+XX if (sth == "something") {
+XX   set_sth("nothing");
+XX }
 
   std::cout << "I think," << std::endl;
 }

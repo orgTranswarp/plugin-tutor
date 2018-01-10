@@ -8,24 +8,21 @@ std::string g_sth("something");
 typedef void (*f_type)();
 f_type g_f_plugin_before_say_sth, g_f_plugin_after_say_sth;
 
-__NOTE__
-const std::string& _get_sth() {
-  return g_sth;
-}
+XX const std::string& _get_sth() {
+XX   return g_sth;
+XX }
 
-__NOTE__
-void _set_sth(const std::string& sth) {
-  g_sth = sth;
-}
+XX void _set_sth(const std::string& sth) {
+XX   g_sth = sth;
+XX }
 
 void load_plugin() {
   void *handle = dlopen("./libplugin_3." SO_SUFFIX, RTLD_LAZY);
   g_f_plugin_before_say_sth = (f_type) dlsym(handle, "before_say_sth");
   g_f_plugin_after_say_sth = (f_type) dlsym(handle, "after_say_sth");
 
-  __NOTE__
-  __init_f_type init_f = (__init_f_type) dlsym(handle, "__init");
-  init_f(_get_sth, _set_sth);
+XX __init_f_type init_f = (__init_f_type) dlsym(handle, "__init");
+XX init_f(_get_sth, _set_sth);
 }
 
 void before_say_sth() {
